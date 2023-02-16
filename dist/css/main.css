@@ -8,4 +8,49 @@
 html {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../assets/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: #bfe2fd;
+}
+
+main {
+  margin-top: 2.5rem;
+}
+
+.steps-list-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.steps-list-mobile__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 3.3rem;
+  width: 3.3rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.steps-list-mobile__item p {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.steps-list-mobile__item.active {
+  border: 1px solid #bfe2fd;
+  background-color: #bfe2fd;
+}
+.steps-list-mobile__item.active p {
+  color: #02295a;
 }/*# sourceMappingURL=main.css.map */
