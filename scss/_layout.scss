@@ -32,8 +32,7 @@
 
 // FORM CONTAINER
 .form-container {
-  width: 90%;
-  margin: 0 auto;
+  @include center();
   background-color: $neutral-white;
   padding: 3rem 2.2rem;
   border-radius: 1rem;
@@ -62,5 +61,41 @@
     font-weight: weight("medium");
     opacity: 1;
     color: $neutral-cool-gray;
+  }
+}
+
+// NAV
+.nav-mobile {
+  width: 100%;
+  padding: 2rem 0;
+  position: fixed;
+  background-color: $neutral-white;
+  left: 0;
+  bottom: 0;
+
+  .next-step-btn {
+    background-color: $primary-marine-blue;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .confirm-btn {
+    background-color: $primary-purplish-blue;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  div {
+    @include center();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: weight("medium");
+      color: $neutral-cool-gray;
+      font-size: 1.5rem;
+    }
   }
 }
