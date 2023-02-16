@@ -1,0 +1,66 @@
+// styles for header/footer,etc...
+
+// STEPS LIST
+.steps-list-mobile {
+  @include flexBox(row);
+  list-style: none;
+  gap: 1.5rem;
+  margin-bottom: 3.8rem;
+}
+
+.steps-list-mobile__item {
+  @include flexBox(row);
+  height: 3.3rem;
+  width: 3.3rem;
+  border: 1px solid $neutral-white;
+  border-radius: 50%;
+  padding: 1rem;
+  p {
+    color: $neutral-white;
+    font-size: 1.4rem;
+    font-weight: weight("bold");
+  }
+}
+
+.steps-list-mobile__item.active {
+  border: 1px solid $primary-light-blue;
+  background-color: $primary-light-blue;
+  p {
+    color: $primary-marine-blue;
+  }
+}
+
+// FORM CONTAINER
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $neutral-white;
+  padding: 3rem 2.2rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-form__cont {
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.personal-info-form__input {
+  font-family: "Ubuntu", sans-serif;
+  color: $primary-marine-blue;
+  font-weight: weight("bold");
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid $neutral-light-gray;
+  border-radius: 4px;
+
+  &::placeholder {
+    font-weight: weight("medium");
+    opacity: 1;
+    color: $neutral-cool-gray;
+  }
+}

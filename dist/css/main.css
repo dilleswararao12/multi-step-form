@@ -14,11 +14,44 @@ body {
   height: 100vh;
   background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
-  background-color: #bfe2fd;
+  background-color: #eff5ff;
 }
 
 main {
   margin-top: 2.5rem;
+}
+
+label {
+  display: block;
+  color: #02295a;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #473dff;
+}
+
+.form-heading-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-heading-cont__header {
+  font-size: 2.4rem;
+  color: #02295a;
+}
+
+.form-heading-cont__subheader {
+  width: 80%;
+  color: #9699ab;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
 }
 
 .steps-list-mobile {
@@ -28,6 +61,7 @@ main {
   flex-direction: row;
   list-style: none;
   gap: 1.5rem;
+  margin-bottom: 3.8rem;
 }
 
 .steps-list-mobile__item {
@@ -53,4 +87,40 @@ main {
 }
 .steps-list-mobile__item.active p {
   color: #02295a;
+}
+
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 3rem 2.2rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-form__cont div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.personal-info-form__input {
+  font-family: "Ubuntu", sans-serif;
+  color: #02295a;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d6d9e6;
+  border-radius: 4px;
+}
+.personal-info-form__input::-moz-placeholder {
+  font-weight: 500;
+  opacity: 1;
+  color: #9699ab;
+}
+.personal-info-form__input::placeholder {
+  font-weight: 500;
+  opacity: 1;
+  color: #9699ab;
 }/*# sourceMappingURL=main.css.map */

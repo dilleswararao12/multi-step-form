@@ -6,6 +6,7 @@ $primary-purplish-blue: #473dff;
 $primary-pastel-blue: #adbeff;
 $primary-light-blue: #bfe2fd;
 $primary-strawberry-red: #ed3548;
+$primary-bg: #eff5ff;
 
 $neutral-cool-gray: #9699ab;
 $neutral-light-gray: #d6d9e6;
@@ -45,9 +46,23 @@ body {
   height: 100vh;
   background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
-  background-color: $primary-light-blue;
+  background-color: $primary-bg;
 }
 
 main {
   margin-top: 2.5rem;
+}
+
+label {
+  display: block;
+  color: $primary-marine-blue;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-purplish-blue;
+  }
 }
