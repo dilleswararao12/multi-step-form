@@ -23,7 +23,7 @@
         <li class="steps-list-mobile__item"><p>4</p></li>
       </ul>
       <div class="form-container">
-        <form id="personal-info-form">
+        <!-- <form id="personal-info-form">
           <div class="form-heading-cont">
             <h2 class="form-heading-cont__header">Personal info</h2>
             <p class="form-heading-cont__subheader">
@@ -62,6 +62,54 @@
               />
             </div>
           </div>
+        </form> -->
+        <div id="select-your-plan-form">
+          <div class="form-heading-cont">
+            <h2 class="form-heading-cont__header">Select your plan</h2>
+            <p class="form-heading-cont__subheader">
+              You have the option of monthly or yearly billing.
+            </p>
+          </div>
+          <div class="select-your-plan-form__cont">
+            <div class="option-component">
+              <div class="select-your-plan-form__item">
+                <img src="./dist/assets/images/icon-arcade.svg" alt="arcade icon" />
+                <div>
+                  <p class="select-your-plan-form__item-title">Arcade</p>
+                  <p class="select-your-plan-form__item-description">$9/mo</p>
+                </div>
+              </div>
+            </div>
+            <div class="option-component">
+              <div class="select-your-plan-form__item">
+                <img src="./dist/assets/images/icon-advanced.svg" alt="advanced icon"/>
+                <div>
+                  <p class="select-your-plan-form__item-title">Advanced</p>
+                  <p class="select-your-plan-form__item-description">$12/mo</p>
+                </div>
+            </div>
+            </div>
+            <div class="option-component">
+              <div class="select-your-plan-form__item">
+                <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
+                <div>
+                  <p class="select-your-plan-form__item-title">Pro</p>
+                  <p class="select-your-plan-form__item-description">$15/mo</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <form id="monthly-yearly-form">
+          <div>
+            <p class="active">Monthly</p>
+            <label class="switch">
+              <input type="checkbox" name="monthly-yearly" />
+              <span class="slider-round"></span>
+            </label>
+
+            <p>Yearly</p>
+          </div>
+
         </form>
       </div>
     </main>

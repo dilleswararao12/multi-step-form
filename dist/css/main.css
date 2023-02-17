@@ -64,6 +64,16 @@ input:focus {
   cursor: pointer;
 }
 
+.option-component {
+  border: 1px solid #d6d9e6;
+  border-radius: 7px;
+  padding: 1.5rem 1.5rem;
+}
+.option-component.is-selected {
+  border: 1px solid #473dff;
+  background-color: #fafbff;
+}
+
 .steps-list-mobile {
   display: flex;
   justify-content: center;
@@ -133,6 +143,95 @@ input:focus {
   font-weight: 500;
   opacity: 1;
   color: #9699ab;
+}
+
+.select-your-plan-form__cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.select-your-plan-form__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.select-your-plan-form__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.select-your-plan-form__item .select-your-plan-form__item-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #02295a;
+}
+.select-your-plan-form__item .select-your-plan-form__item-description {
+  font-size: 1.4rem;
+  color: #9699ab;
+}
+
+#monthly-yearly-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5rem 0rem;
+  border-radius: 4px;
+  background-color: #fafbff;
+}
+#monthly-yearly-form div {
+  display: flex;
+  gap: 2rem;
+}
+#monthly-yearly-form div p {
+  color: #9699ab;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+#monthly-yearly-form div p.active {
+  color: #02295a;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.8rem;
+  height: 2rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:checked + .slider-round {
+  background-color: #02295a;
+}
+.switch input:checked + .slider-round:before {
+  transform: translateX(1.6rem);
+}
+.switch .slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02295a;
+  transition: 0.4s;
+  border-radius: 3.4rem;
+}
+.switch .slider-round:before {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 .nav-mobile {

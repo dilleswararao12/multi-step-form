@@ -27,3 +27,14 @@
   color: $neutral-white;
   cursor: pointer;
 }
+
+.option-component {
+  border: 1px solid $neutral-light-gray;
+  border-radius: 7px;
+  padding: 1.5rem 1.5rem;
+
+  &.is-selected {
+    border: 1px solid $primary-purplish-blue;
+    background-color: $neutral-alabaster;
+  }
+}
