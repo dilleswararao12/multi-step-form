@@ -19,6 +19,11 @@ class sectionViewer {
       this.sections[0].classList.add("active");
     }
   }
+
+  renderThankYou(prevElIndex) {
+    this.sections[prevElIndex].classList.remove("active");
+    this.sections[this.sections.length - 1].classList.add("active");
+  }
 }
 
 export default new sectionViewer();

@@ -337,8 +337,8 @@
 }
 
 // THANK YOU SECTION
-.thank-you-section {
-  @include flexBox(column);
+#thank-you-section {
+  display: none;
   margin-top: 5rem;
   padding-bottom: 2rem;
   gap: 2.5rem;
@@ -363,6 +363,10 @@
     font-size: 1.6rem;
     color: $neutral-cool-gray;
     text-align: center;
+  }
+
+  &.active {
+    @include flexBox(column);
   }
 }
 // NAV

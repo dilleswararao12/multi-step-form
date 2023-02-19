@@ -3,28 +3,36 @@ import navigationViewer from "./views/navigationViewer.js";
 import sectionViewer from "./views/sectionViewer.js";
 
 function controlRender() {
-  navigationViewer.stepItemRender(null, null);
-  sectionViewer.renderSection(null, null);
+  renderElements(null, null);
 }
 
 function controlNextButton() {
   const prevElPosition = model.state.currStep;
   model.incrementCurrStep();
-  navigationViewer.stepItemRender(prevElPosition, model.state.currStep);
-  sectionViewer.renderSection(prevElPosition, model.state.currStep);
+  renderElements(prevElPosition, model.state.currStep);
 }
 
 function controlBackElement() {
   const prevElPosition = model.state.currStep;
   model.decrementCurrstep();
-  navigationViewer.stepItemRender(prevElPosition, model.state.currStep);
-  sectionViewer.renderSection(prevElPosition, model.state.currStep);
+  renderElements(prevElPosition, model.state.currStep);
 }
 
+function controlConfirmButton() {
+  const prevElPosition = model.state.currStep;
+  navigationViewer.confirmHandler();
+  sectionViewer.renderThankYou(prevElPosition);
+}
+
+function renderElements(prev, curr) {
+  navigationViewer.stepItemRender(prev, curr);
+  sectionViewer.renderSection(prev, curr);
+}
 function init() {
   navigationViewer.addHandlerRender(controlRender);
   navigationViewer.addHandlerNextClick(controlNextButton);
   navigationViewer.addHandlerBackClick(controlBackElement);
+  navigationViewer.addHandlerConfirmClick(controlConfirmButton);
 }
 
 init();

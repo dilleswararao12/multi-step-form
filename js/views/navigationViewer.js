@@ -6,6 +6,7 @@ class navigationViewer {
     this.nextButton = document.querySelector(".next-step-btn");
     this.backEl = document.querySelector(".back-par");
     this.confirmButton = document.querySelector(".confirm-btn");
+    this.navMobileEl = document.querySelector(".nav-mobile");
   }
 
   addHandlerRender(handler) {
@@ -18,6 +19,10 @@ class navigationViewer {
 
   addHandlerBackClick(handler) {
     this.backEl.addEventListener("click", handler);
+  }
+
+  addHandlerConfirmClick(handler) {
+    this.confirmButton.addEventListener("click", handler);
   }
 
   stepItemRender(prevElIndex, currElIndex) {
@@ -46,6 +51,10 @@ class navigationViewer {
     } else {
       this.backEl.classList.remove("active");
     }
+  }
+
+  confirmHandler() {
+    this.navMobileEl.style.display = "none";
   }
 }
 
