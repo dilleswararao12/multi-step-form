@@ -1,4 +1,13 @@
 // styles for components buttons,modals,text,etc..
+
+.section {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
 .form-heading-cont {
   display: flex;
   flex-direction: column;

@@ -23,7 +23,7 @@
         <li class="steps-list-mobile__item"><p>4</p></li>
       </ul>
       <div class="form-container">
-        <!-- <form id="personal-info-form">
+        <form id="personal-info-form" class="section">
           <div class="form-heading-cont">
             <h2 class="form-heading-cont__header">Personal info</h2>
             <p class="form-heading-cont__subheader">
@@ -62,8 +62,8 @@
               />
             </div>
           </div>
-        </form> -->
-        <!-- <div id="select-your-plan-form">
+        </form>
+        <div id="select-your-plan-form" class="section">
           <div class="form-heading-cont">
             <h2 class="form-heading-cont__header">Select your plan</h2>
             <p class="form-heading-cont__subheader">
@@ -73,7 +73,10 @@
           <div class="select-your-plan-form__cont">
             <div class="option-component">
               <div class="select-your-plan-form__item">
-                <img src="./dist/assets/images/icon-arcade.svg" alt="arcade icon" />
+                <img
+                  src="./dist/assets/images/icon-arcade.svg"
+                  alt="arcade icon"
+                />
                 <div>
                   <p class="select-your-plan-form__item-title">Arcade</p>
                   <p class="select-your-plan-form__item-description">$9/mo</p>
@@ -82,12 +85,15 @@
             </div>
             <div class="option-component">
               <div class="select-your-plan-form__item">
-                <img src="./dist/assets/images/icon-advanced.svg" alt="advanced icon"/>
+                <img
+                  src="./dist/assets/images/icon-advanced.svg"
+                  alt="advanced icon"
+                />
                 <div>
                   <p class="select-your-plan-form__item-title">Advanced</p>
                   <p class="select-your-plan-form__item-description">$12/mo</p>
                 </div>
-            </div>
+              </div>
             </div>
             <div class="option-component">
               <div class="select-your-plan-form__item">
@@ -96,111 +102,118 @@
                   <p class="select-your-plan-form__item-title">Pro</p>
                   <p class="select-your-plan-form__item-description">$15/mo</p>
                 </div>
+              </div>
             </div>
           </div>
+          <form id="monthly-yearly-form">
+            <div>
+              <p class="active">Monthly</p>
+              <label class="switch">
+                <input type="checkbox" name="monthly-yearly" />
+                <span class="slider-round"></span>
+              </label>
+
+              <p>Yearly</p>
+            </div>
+          </form>
         </div>
-        <form id="monthly-yearly-form">
-          <div>
-            <p class="active">Monthly</p>
-            <label class="switch">
-              <input type="checkbox" name="monthly-yearly" />
-              <span class="slider-round"></span>
+        <form id="add-ons-form" class="section">
+          <div class="form-heading-cont">
+            <h2 class="form-heading-cont__header">Pick add-ons</h2>
+            <p class="form-heading-cont__subheader">
+              Add-ons help enchance your gaming experience.
+            </p>
+          </div>
+          <div class="add-ons-form__cont">
+            <label class="option-component" for="online">
+              <div class="add-ons-form__item">
+                <div class="checkbox-cont">
+                  <input type="checkbox" name="online" id="online" />
+                  <span class="mark"></span>
+                </div>
+                <div class="add-ons-form__item-text">
+                  <p class="add-ons-form__item-title">Online service</p>
+                  <p class="add-ons-form__item-description">
+                    Access to multiplayer games
+                  </p>
+                </div>
+                <p class="add-ons-form__item-price">+$1/mo</p>
+              </div>
             </label>
-
-            <p>Yearly</p>
+            <label class="option-component" for="storage">
+              <div class="add-ons-form__item">
+                <div class="checkbox-cont">
+                  <input type="checkbox" name="storage" id="storage" />
+                  <span class="mark"></span>
+                </div>
+                <div class="add-ons-form__item-text">
+                  <p class="add-ons-form__item-title">Larger storage</p>
+                  <p class="add-ons-form__item-description">
+                    Extra 1TB of cloud save
+                  </p>
+                </div>
+                <p class="add-ons-form__item-price">+$2/mo</p>
+              </div>
+            </label>
+            <label class="option-component" for="custom">
+              <div class="add-ons-form__item">
+                <div class="checkbox-cont">
+                  <input type="checkbox" name="custom" id="custom" />
+                  <span class="mark"></span>
+                </div>
+                <div class="add-ons-form__item-text">
+                  <p class="add-ons-form__item-title">Customizable profile</p>
+                  <p class="add-ons-form__item-description">
+                    Custom theme on your profile
+                  </p>
+                </div>
+                <p class="add-ons-form__item-price">+$2/mo</p>
+              </div>
+            </label>
           </div>
-
         </form>
-      </div> -->
-        <!-- <form id="add-ons-form">
-        <div class="form-heading-cont">
-          <h2 class="form-heading-cont__header">Pick add-ons</h2>
-          <p class="form-heading-cont__subheader">
-            Add-ons help enchance your gaming experience.
-          </p>
-        </div>
-        <div class="add-ons-form__cont">
-          <label class="option-component" for="online">
-            <div class="add-ons-form__item">
-              <div class="checkbox-cont">
-                <input type="checkbox" name="online" id="online" />
-                <span class="mark"></span>
+
+        <div id="summary-section" class="section">
+          <div class="form-heading-cont">
+            <h2 class="form-heading-cont__header">Finishing up</h2>
+            <p class="form-heading-cont__subheader">
+              Double-check everything looks OK before confirming.
+            </p>
+          </div>
+          <div class="summary-section__cont">
+            <div class="summary-section__cont-options">
+              <div class="summary-section__cont-options-primary">
+                <div>
+                  <p class="summary-section__primary-text">Arcade (Monthly)</p>
+                  <p>Change</p>
+                </div>
+                <p class="summary-section__primary-summary">$9/mo</p>
               </div>
-              <div class="add-ons-form__item-text">
-                <p class="add-ons-form__item-title">Online service</p>
-                  <p class="add-ons-form__item-description">Access to multiplayer games</p>
-                 
+              <hr />
+              <div class="summary-section__add-ons">
+                <div class="summary-section__add-ons-cont">
+                  <p class="summary-section__add-ons-text">Online service</p>
+                  <p class="summary-section__add-ons-price">+$1/mo</p>
+                </div>
+                <div class="summary-section__add-ons-cont">
+                  <p class="summary-section__add-ons-text">Larger storage</p>
+                  <p class="summary-section__add-ons-price">+$2/mo</p>
+                </div>
+                <div class="summary-section__add-ons-cont">
+                  <p class="summary-section__add-ons-text">
+                    Customizable profile
+                  </p>
+                  <p class="summary-section__add-ons-price">+$2/mo</p>
+                </div>
               </div>
-               <p class="add-ons-form__item-price">+$1/mo</p>
             </div>
-          </label>
-          <label class="option-component" for="storage">
-            <div class="add-ons-form__item">
-              <div class="checkbox-cont">
-                <input type="checkbox" name="storage" id="storage" />
-                <span class="mark"></span>
-              </div>
-              <div class="add-ons-form__item-text">
-                <p class="add-ons-form__item-title">Larger storage</p>
-                  <p class="add-ons-form__item-description">Extra 1TB of cloud save</p>
-              </div>
-              <p class="add-ons-form__item-price">+$2/mo</p>
-            </div>
-          </label>
-          <label class="option-component" for="custom">
-            <div class="add-ons-form__item">
-              <div class="checkbox-cont">
-                <input type="checkbox" name="custom" id="custom" />
-                <span class="mark"></span>
-              </div>
-              <div class="add-ons-form__item-text">
-                <p class="add-ons-form__item-title">Customizable profile</p>
-                <p class="add-ons-form__item-description">Custom theme on your profile</p>
-              </div>
-              <p class="add-ons-form__item-price">+$2/mo</p>
-            </div>
-          </label>
-        </div>
-      </form> -->
-        <!-- <div class="summary-section">
-        <div class="form-heading-cont">
-          <h2 class="form-heading-cont__header">Finishing up</h2>
-          <p class="form-heading-cont__subheader">
-            Double-check everything looks OK before confirming.
-          </p>
-        </div>
-        <div class="summary-section__cont">
-          <div class="summary-section__cont-options">
-            <div class="summary-section__cont-options-primary">
-              <div>
-                <p class="summary-section__primary-text">Arcade (Monthly)</p>
-                <p>Change</p>
-              </div>
-              <p class="summary-section__primary-summary">$9/mo</p>
-            </div>
-            <hr>
-            <div class="summary-section__add-ons">
-              <div class="summary-section__add-ons-cont">
-                <p class="summary-section__add-ons-text">Online service</p>
-                <p class="summary-section__add-ons-price">+$1/mo</p>
-              </div>
-              <div class="summary-section__add-ons-cont">
-                <p class="summary-section__add-ons-text">Larger storage</p>
-                <p class="summary-section__add-ons-price">+$2/mo</p>
-              </div>
-              <div class="summary-section__add-ons-cont">
-                <p class="summary-section__add-ons-text">Customizable profile</p>
-                <p class="summary-section__add-ons-price">+$2/mo</p>
-              </div>
+            <div class="summary-section__cont-summary">
+              <p>Total (per month)</p>
+              <span>+$12/mo</span>
             </div>
           </div>
-          <div class="summary-section__cont-summary">
-            <p>Total (per month)</p>
-            <span>+$12/mo</span>
-          </div>
         </div>
-      </div> -->
-        <div class="thank-you-section">
+        <div id="thank-you-section" class="section">
           <img
             src="./dist/assets/images/icon-thank-you.svg"
             alt="thank you icon"
