@@ -27,13 +27,13 @@ class navigationViewer {
       currStepEl.classList.remove("active");
       const nextElementPosition = currElIndex;
       this.stepsMobileItems[nextElementPosition].classList.add("active");
-      this.renderBackEl(currElIndex);
+      this.renderNavElements(currElIndex);
     } else {
       this.stepsMobileItems[0].classList.add("active");
     }
   }
 
-  renderBackEl(currIndex) {
+  renderNavElements(currIndex) {
     if (currIndex > 0) {
       this.backEl.classList.add("active");
       if (currIndex === 3) {
