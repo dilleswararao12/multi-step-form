@@ -379,12 +379,19 @@
     &:hover {
       opacity: 0.9;
     }
+    &.not-active {
+      display: none;
+    }
   }
 
   .confirm-btn {
+    display: none;
     background-color: $primary-purplish-blue;
     &:hover {
       opacity: 0.9;
+    }
+    &.active {
+      display: block;
     }
   }
   div {
@@ -397,7 +404,14 @@
       font-weight: weight("medium");
       color: $neutral-cool-gray;
       font-size: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
       cursor: pointer;
+
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 }

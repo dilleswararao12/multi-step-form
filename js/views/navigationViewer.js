@@ -27,8 +27,24 @@ class navigationViewer {
       currStepEl.classList.remove("active");
       const nextElementPosition = currElIndex;
       this.stepsMobileItems[nextElementPosition].classList.add("active");
+      this.renderBackEl(currElIndex);
     } else {
       this.stepsMobileItems[0].classList.add("active");
+    }
+  }
+
+  renderBackEl(currIndex) {
+    if (currIndex > 0) {
+      this.backEl.classList.add("active");
+      if (currIndex === 3) {
+        this.confirmButton.classList.add("active");
+        this.nextButton.classList.add("not-active");
+      } else {
+        this.confirmButton.classList.remove("active");
+        this.nextButton.classList.remove("not-active");
+      }
+    } else {
+      this.backEl.classList.remove("active");
     }
   }
 }

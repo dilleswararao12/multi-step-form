@@ -433,11 +433,18 @@ input:focus {
 .nav-mobile .next-step-btn:hover {
   opacity: 0.9;
 }
+.nav-mobile .next-step-btn.not-active {
+  display: none;
+}
 .nav-mobile .confirm-btn {
+  display: none;
   background-color: #473dff;
 }
 .nav-mobile .confirm-btn:hover {
   opacity: 0.9;
+}
+.nav-mobile .confirm-btn.active {
+  display: block;
 }
 .nav-mobile div {
   width: 90%;
@@ -450,5 +457,11 @@ input:focus {
   font-weight: 500;
   color: #9699ab;
   font-size: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
   cursor: pointer;
+}
+.nav-mobile div p.active {
+  opacity: 1;
+  pointer-events: all;
 }/*# sourceMappingURL=main.css.map */
