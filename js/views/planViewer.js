@@ -4,12 +4,30 @@ class planViewer {
     this.planOptions = Array.from(this.parentElement.childNodes).filter(
       (el) => el.nodeName === "DIV"
     );
+    this.sliderEl = document.querySelector(".switch");
+    this.checkboxEl = document.querySelector("#monthly-yearly");
+    this.monthlyEl = document.querySelector(".monthly");
+    this.yearlyEl = document.querySelector(".yearly");
+    this.freeParEls = document.querySelectorAll(
+      ".select-your-plan-form__item-free"
+    );
+    this.arcadePriceEl = document.getElementById("arcade-price");
+    this.advancedPriceEl = document.getElementById("advanced-price");
+    this.proPriceEl = document.getElementById("pro-price");
     this.currentPlan = null;
+    this.checkboxEl.checked = false;
   }
 
   addHandlerPlanClick(handler) {
     this.parentElement.addEventListener("click", (e) => {
       this.renderSelectPlan(e);
+      handler();
+    });
+  }
+
+  addHandlerCheckClick(handler) {
+    this.sliderEl.addEventListener("click", (e) => {
+      if (e.target.tagName === "INPUT") return;
       handler();
     });
   }
@@ -25,6 +43,36 @@ class planViewer {
         }
         el.classList.add("is-selected");
         this.setCurrentPlan(i);
+      }
+    }
+  }
+
+  renderMontlyYearlyEl() {
+    if (!this.checkboxEl.checked) {
+      this.monthlyEl.classList.remove("active");
+      this.yearlyEl.classList.add("active");
+      this.arcadePriceEl.textContent = "$90/yr";
+      this.advancedPriceEl.textContent = "$120/yr";
+      this.proPriceEl.textContent = "$150/yr";
+      this.renderFreeParEl(true);
+    } else {
+      this.monthlyEl.classList.add("active");
+      this.yearlyEl.classList.remove("active");
+      this.arcadePriceEl.textContent = "$9/mo";
+      this.advancedPriceEl.textContent = "$12/mo";
+      this.proPriceEl.textContent = "$15/mo";
+      this.renderFreeParEl(false);
+    }
+  }
+
+  renderFreeParEl(isYearly) {
+    if (isYearly) {
+      for (const el of this.freeParEls) {
+        el.classList.add("active");
+      }
+    } else {
+      for (const el of this.freeParEls) {
+        el.classList.remove("active");
       }
     }
   }

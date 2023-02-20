@@ -2,6 +2,7 @@ export const state = {
   currStep: 0,
   optionPlans: { 0: "arcade", 1: "advanced", 2: "pro" },
   currPlan: null,
+  isMonthly: true,
 };
 
 export function incrementCurrStep() {

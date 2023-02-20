@@ -182,6 +182,14 @@ input:focus {
   font-size: 1.4rem;
   color: #9699ab;
 }
+.select-your-plan-form__item .select-your-plan-form__item-free {
+  display: none;
+  font-size: 1.2rem;
+  color: #02295a;
+}
+.select-your-plan-form__item .select-your-plan-form__item-free.active {
+  display: block;
+}
 
 #monthly-yearly-form {
   display: flex;

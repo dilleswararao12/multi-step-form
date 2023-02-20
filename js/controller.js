@@ -30,6 +30,11 @@ function controlPlanOption() {
   model.changeCurrentPlan(plan);
 }
 
+function controlMonthlyRender() {
+  planViewer.renderMontlyYearlyEl();
+  model.state.isMonthly = !model.state.isMonthly;
+}
+
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
   sectionViewer.renderSection(prev, curr);
@@ -40,6 +45,7 @@ function init() {
   navigationViewer.addHandlerBackClick(controlBackElement);
   navigationViewer.addHandlerConfirmClick(controlConfirmButton);
   planViewer.addHandlerPlanClick(controlPlanOption);
+  planViewer.addHandlerCheckClick(controlMonthlyRender);
 }
 
 init();

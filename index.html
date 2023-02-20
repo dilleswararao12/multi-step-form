@@ -79,7 +79,13 @@
                 />
                 <div>
                   <p class="select-your-plan-form__item-title">Arcade</p>
-                  <p class="select-your-plan-form__item-description">$9/mo</p>
+                  <p
+                    class="select-your-plan-form__item-description"
+                    id="arcade-price"
+                  >
+                    $9/mo
+                  </p>
+                  <p class="select-your-plan-form__item-free">2 months free</p>
                 </div>
               </div>
             </div>
@@ -91,7 +97,13 @@
                 />
                 <div>
                   <p class="select-your-plan-form__item-title">Advanced</p>
-                  <p class="select-your-plan-form__item-description">$12/mo</p>
+                  <p
+                    class="select-your-plan-form__item-description"
+                    id="advanced-price"
+                  >
+                    $12/mo
+                  </p>
+                  <p class="select-your-plan-form__item-free">2 months free</p>
                 </div>
               </div>
             </div>
@@ -100,20 +112,30 @@
                 <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
                 <div>
                   <p class="select-your-plan-form__item-title">Pro</p>
-                  <p class="select-your-plan-form__item-description">$15/mo</p>
+                  <p
+                    class="select-your-plan-form__item-description"
+                    id="pro-price"
+                  >
+                    $15/mo
+                  </p>
+                  <p class="select-your-plan-form__item-free">2 months free</p>
                 </div>
               </div>
             </div>
           </div>
           <form id="monthly-yearly-form">
             <div>
-              <p class="active">Monthly</p>
-              <label class="switch">
-                <input type="checkbox" name="monthly-yearly" />
+              <p class="monthly active">Monthly</p>
+              <label class="switch" for="monthly-yearly">
+                <input
+                  type="checkbox"
+                  name="monthly-yearly"
+                  id="monthly-yearly"
+                />
                 <span class="slider-round"></span>
               </label>
 
-              <p>Yearly</p>
+              <p class="yearly">Yearly</p>
             </div>
           </form>
         </div>
