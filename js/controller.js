@@ -2,6 +2,7 @@ import * as model from "./model.js";
 import navigationViewer from "./views/navigationViewer.js";
 import planViewer from "./views/planViewer.js";
 import sectionViewer from "./views/sectionViewer.js";
+import addonViewer from "./views/addonViewer.js";
 
 function controlRender() {
   renderElements(null, null);
@@ -35,6 +36,8 @@ function controlMonthlyRender() {
   model.state.isMonthly = !model.state.isMonthly;
 }
 
+// function controlCheckBoxRender() {}
+
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
   sectionViewer.renderSection(prev, curr);
@@ -46,6 +49,7 @@ function init() {
   navigationViewer.addHandlerConfirmClick(controlConfirmButton);
   planViewer.addHandlerPlanClick(controlPlanOption);
   planViewer.addHandlerCheckClick(controlMonthlyRender);
+  // addonViewer.addHandlerClickCheckBox(controlCheckBoxRender);
 }
 
 init();

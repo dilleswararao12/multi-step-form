@@ -3,6 +3,9 @@ export const state = {
   optionPlans: { 0: "arcade", 1: "advanced", 2: "pro" },
   currPlan: null,
   isMonthly: true,
+  onlineServiceChecked: false,
+  largerStorageChecked: false,
+  customProfileChecked: false,
 };
 
 export function incrementCurrStep() {
