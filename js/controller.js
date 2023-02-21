@@ -34,9 +34,10 @@ function controlPlanOption() {
 function controlMonthlyRender() {
   planViewer.renderMontlyYearlyEl();
   model.state.isMonthly = !model.state.isMonthly;
+  addonViewer.renderPriceEl(model.state.isMonthly);
 }
 
-// function controlCheckBoxRender() {}
+function controlCheckBoxRender() {}
 
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
@@ -49,7 +50,7 @@ function init() {
   navigationViewer.addHandlerConfirmClick(controlConfirmButton);
   planViewer.addHandlerPlanClick(controlPlanOption);
   planViewer.addHandlerCheckClick(controlMonthlyRender);
-  // addonViewer.addHandlerClickCheckBox(controlCheckBoxRender);
+  addonViewer.addHandlerClickCheckBox(controlCheckBoxRender);
 }
 
 init();
