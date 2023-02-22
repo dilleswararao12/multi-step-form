@@ -376,7 +376,7 @@ input:focus {
 }
 
 .summary-section__add-ons-cont {
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 .summary-section__add-ons-cont p {

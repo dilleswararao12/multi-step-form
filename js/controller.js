@@ -3,6 +3,7 @@ import navigationViewer from "./views/navigationViewer.js";
 import planViewer from "./views/planViewer.js";
 import sectionViewer from "./views/sectionViewer.js";
 import addonViewer from "./views/addonViewer.js";
+import summaryViewer from "./views/summaryViewer.js";
 
 function controlRender() {
   renderElements(null, null);
@@ -27,20 +28,37 @@ function controlConfirmButton() {
 }
 
 function controlPlanOption() {
-  const plan = planViewer.getCurrentPlan();
-  model.changeCurrentPlan(plan);
+  const planIndex = planViewer.getCurrentPlan();
+  model.changeCurrentPlan(planIndex);
+  controlSummaryPrimaryEl();
 }
 
 function controlMonthlyRender() {
   planViewer.renderMontlyYearlyEl();
   model.state.isMonthly = !model.state.isMonthly;
   addonViewer.renderPriceEl(model.state.isMonthly);
+  controlSummaryPrimaryEl();
 }
 
 function controlCheckBoxState(event) {
   const inputTargetID = event.target.id;
   const isChecked = event.target.checked;
   model.changeOptionCheckedState(inputTargetID, isChecked);
+  summaryViewer.renderSummaryOptionCont(inputTargetID, isChecked);
+}
+
+function controlSummaryPrimaryEl() {
+  const plan = model.state.currPlan;
+  let planPrice = null;
+  if (plan === "arcade") planPrice = planViewer.arcadePriceEl.textContent;
+  else if (plan === "advanced")
+    planPrice = planViewer.advancedPriceEl.textContent;
+  else planPrice = planViewer.proPriceEl.textContent;
+  summaryViewer.renderPrimaryEl(
+    model.state.currPlan,
+    model.state.isMonthly,
+    planPrice.trim()
+  );
 }
 
 function renderElements(prev, curr) {
