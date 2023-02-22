@@ -21,3 +21,13 @@ export function decrementCurrstep() {
 export function changeCurrentPlan(key) {
   state.currPlan = state.optionPlans[key];
 }
+
+export function changeOptionCheckedState(target, checkboxStatus) {
+  if (target === "online") {
+    state.onlineServiceChecked = checkboxStatus;
+  } else if (target === "storage") {
+    state.largerStorageChecked = checkboxStatus;
+  } else {
+    state.customProfileChecked = checkboxStatus;
+  }
+}

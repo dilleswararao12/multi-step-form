@@ -37,7 +37,11 @@ function controlMonthlyRender() {
   addonViewer.renderPriceEl(model.state.isMonthly);
 }
 
-function controlCheckBoxRender() {}
+function controlCheckBoxState(event) {
+  const inputTargetID = event.target.id;
+  const isChecked = event.target.checked;
+  model.changeOptionCheckedState(inputTargetID, isChecked);
+}
 
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
@@ -50,7 +54,7 @@ function init() {
   navigationViewer.addHandlerConfirmClick(controlConfirmButton);
   planViewer.addHandlerPlanClick(controlPlanOption);
   planViewer.addHandlerCheckClick(controlMonthlyRender);
-  addonViewer.addHandlerClickCheckBox(controlCheckBoxRender);
+  addonViewer.addHandlerClickCheckBox(controlCheckBoxState);
 }
 
 init();

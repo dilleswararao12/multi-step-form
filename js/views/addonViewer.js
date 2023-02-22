@@ -19,13 +19,13 @@ class addonViewer {
 
   addHandlerClickCheckBox(handler) {
     this.parentElement.addEventListener("click", (event) => {
+      if (event.target.tagName !== "INPUT") return;
       this.renderCheckBox(event);
+      handler(event);
     });
   }
 
   renderCheckBox(event) {
-    if (event.target.tagName !== "INPUT") return;
-    console.log(event.target.checked);
     const target = event.target.closest(".option-component");
     if (target) {
       target.classList.toggle("is-selected");

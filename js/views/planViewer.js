@@ -4,7 +4,7 @@ class planViewer {
     this.planOptions = Array.from(this.parentElement.childNodes).filter(
       (el) => el.nodeName === "DIV"
     );
-    this.sliderEl = document.querySelector(".switch");
+    this.labelEl = document.querySelector(".switch");
     this.checkboxEl = document.querySelector("#monthly-yearly");
     this.monthlyEl = document.querySelector(".monthly");
     this.yearlyEl = document.querySelector(".yearly");
@@ -26,8 +26,8 @@ class planViewer {
   }
 
   addHandlerCheckClick(handler) {
-    this.sliderEl.addEventListener("click", (e) => {
-      if (e.target.tagName === "INPUT") return;
+    this.labelEl.addEventListener("click", (e) => {
+      if (e.target.tagName !== "INPUT") return;
       handler();
     });
   }
@@ -48,7 +48,7 @@ class planViewer {
   }
 
   renderMontlyYearlyEl() {
-    if (!this.checkboxEl.checked) {
+    if (this.checkboxEl.checked) {
       this.monthlyEl.classList.remove("active");
       this.yearlyEl.classList.add("active");
       this.arcadePriceEl.textContent = "$90/yr";
