@@ -10,10 +10,18 @@ class summaryViewer {
     this.summaryOnlineCont = document.getElementById("summary-online");
     this.summaryStorageCont = document.getElementById("summary-storage");
     this.summaryCustomCont = document.getElementById("summary-custom");
+
+    [
+      this.summaryOnlineContPrice,
+      this.summaryStorageContPrice,
+      this.summaryCustomContPrice,
+    ] = Array.from(
+      document.querySelectorAll(".summary-section__add-ons-price")
+    );
   }
 
   renderPrimaryEl(currPlan, isMonthly, price) {
-    const capitalized = currPlan.charAt(0).toUpperCase() + currPlan.slice(1);
+    const capitalized = currPlan?.charAt(0).toUpperCase() + currPlan?.slice(1);
     const datePlan = isMonthly ? "Monthly" : "Yearly";
     this.primarySummaryText.textContent = `${capitalized} (${datePlan})`;
     this.primarySummaryPrice.textContent = price;
@@ -27,6 +35,12 @@ class summaryViewer {
     } else {
       this.summaryCustomCont.style.display = isChecked ? "flex" : "none";
     }
+  }
+
+  renderAddonPrice(onlinePrice, storagePrice, customPrice) {
+    this.summaryOnlineContPrice.textContent = onlinePrice;
+    this.summaryStorageContPrice.textContent = storagePrice;
+    this.summaryCustomContPrice.textContent = customPrice;
   }
 }
 

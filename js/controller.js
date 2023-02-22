@@ -38,6 +38,16 @@ function controlMonthlyRender() {
   model.state.isMonthly = !model.state.isMonthly;
   addonViewer.renderPriceEl(model.state.isMonthly);
   controlSummaryPrimaryEl();
+  const [onlinePrice, storagePrice, customPrice] = [
+    addonViewer.onlinePriceEl.textContent,
+    addonViewer.storagePriceEl.textContent,
+    addonViewer.customPriceEl.textContent,
+  ];
+  summaryViewer.renderAddonPrice(
+    onlinePrice.trim(),
+    storagePrice.trim(),
+    customPrice.trim()
+  );
 }
 
 function controlCheckBoxState(event) {
