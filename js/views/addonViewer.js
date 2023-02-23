@@ -23,10 +23,18 @@ class addonViewer {
       this.renderCheckBox(event);
       handler(event);
     });
+    this.parentElement.addEventListener("keypress", (event) => {
+      const checkEl = event.target.childNodes[1].childNodes[1].childNodes[1];
+      if (event.key === "Enter") {
+        this.renderCheckBox(event);
+        handler(checkEl);
+      }
+    });
   }
 
   renderCheckBox(event) {
     const target = event.target.closest(".option-component");
+
     if (target) {
       target.classList.toggle("is-selected");
     }

@@ -23,12 +23,24 @@ class planViewer {
       this.renderSelectPlan(e);
       handler();
     });
+    this.parentElement.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        this.renderSelectPlan(e);
+        handler();
+      }
+    });
   }
 
   addHandlerCheckClick(handler) {
     this.labelEl.addEventListener("click", (e) => {
       if (e.target.tagName !== "INPUT") return;
       handler();
+    });
+    this.labelEl.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        this.checkboxEl.checked = !this.checkboxEl.checked;
+        handler();
+      }
     });
   }
 

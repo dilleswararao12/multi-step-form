@@ -71,7 +71,7 @@
             </p>
           </div>
           <div class="select-your-plan-form__cont">
-            <div class="option-component">
+            <div class="option-component" role="button" tabindex="0">
               <div class="select-your-plan-form__item">
                 <img
                   src="./dist/assets/images/icon-arcade.svg"
@@ -89,7 +89,7 @@
                 </div>
               </div>
             </div>
-            <div class="option-component">
+            <div class="option-component" role="button" tabindex="0">
               <div class="select-your-plan-form__item">
                 <img
                   src="./dist/assets/images/icon-advanced.svg"
@@ -107,7 +107,7 @@
                 </div>
               </div>
             </div>
-            <div class="option-component">
+            <div class="option-component" role="button" tabindex="0">
               <div class="select-your-plan-form__item">
                 <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
                 <div>
@@ -126,7 +126,7 @@
           <form id="monthly-yearly-form">
             <div>
               <p class="monthly active">Monthly</p>
-              <label class="switch" for="monthly-yearly">
+              <label class="switch" for="monthly-yearly" tabindex="0">
                 <input
                   type="checkbox"
                   name="monthly-yearly"
@@ -147,7 +147,7 @@
             </p>
           </div>
           <div class="add-ons-form__cont">
-            <label class="option-component" for="online">
+            <label class="option-component" for="online" tabindex="0">
               <div class="add-ons-form__item">
                 <div class="checkbox-cont">
                   <input type="checkbox" name="online" id="online" />
@@ -162,7 +162,7 @@
                 <p class="add-ons-form__item-price">+$1/mo</p>
               </div>
             </label>
-            <label class="option-component" for="storage">
+            <label class="option-component" for="storage" tabindex="0">
               <div class="add-ons-form__item">
                 <div class="checkbox-cont">
                   <input type="checkbox" name="storage" id="storage" />
@@ -177,7 +177,7 @@
                 <p class="add-ons-form__item-price">+$2/mo</p>
               </div>
             </label>
-            <label class="option-component" for="custom">
+            <label class="option-component" for="custom" tabindex="0">
               <div class="add-ons-form__item">
                 <div class="checkbox-cont">
                   <input type="checkbox" name="custom" id="custom" />
@@ -207,7 +207,13 @@
               <div class="summary-section__cont-options-primary">
                 <div>
                   <p class="summary-section__primary-text">Arcade (Monthly)</p>
-                  <p class="summary-section__primary-change">Change</p>
+                  <p
+                    class="summary-section__primary-change"
+                    tabindex="0"
+                    role="link"
+                  >
+                    Change
+                  </p>
                 </div>
                 <p class="summary-section__primary-summary">$9/mo</p>
               </div>
@@ -254,7 +260,7 @@
         <main>
           <div class="nav-mobile">
             <div>
-              <p class="back-par">Go Back</p>
+              <p class="back-par" role="button" tabindex="0">Go Back</p>
               <button class="btn next-step-btn">Next Step</button>
               <button class="btn confirm-btn">Confirm</button>
             </div>

@@ -65,5 +65,4 @@ export function totalPriceCalc() {
     if (state.customProfileChecked)
       state.totalPrice += state.customPrices["yearly"];
   }
-  console.log(state.totalPrice);
 }

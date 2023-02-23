@@ -133,6 +133,10 @@
   width: 3.8rem;
   height: 2rem;
 
+  &:focus-visible {
+    @include outline();
+  }
+
   input {
     opacity: 0;
     width: 0;
@@ -346,6 +350,11 @@
   }
 }
 
+.summary-section__primary-change {
+  &:focus-visible {
+    @include outline();
+  }
+}
 // THANK YOU SECTION
 #thank-you-section {
   display: none;
@@ -425,6 +434,10 @@
       &.active {
         opacity: 1;
         pointer-events: all;
+      }
+
+      &:focus-visible {
+        @include outline();
       }
     }
   }

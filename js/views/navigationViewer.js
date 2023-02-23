@@ -15,14 +15,23 @@ class navigationViewer {
 
   addHandlerNextClick(handler) {
     this.nextButton.addEventListener("click", handler);
+    this.nextButton.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") handler();
+    });
   }
 
   addHandlerBackClick(handler) {
     this.backEl.addEventListener("click", handler);
+    this.backEl.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") handler();
+    });
   }
 
   addHandlerConfirmClick(handler) {
     this.confirmButton.addEventListener("click", handler);
+    this.confirmButton.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") handler();
+    });
   }
 
   stepItemRender(prevElIndex, currElIndex) {

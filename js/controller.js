@@ -54,8 +54,10 @@ function controlMonthlyRender() {
 }
 
 function controlCheckBoxState(event) {
-  const inputTargetID = event.target.id;
-  const isChecked = event.target.checked;
+  const inputTargetID = event.target?.id ? event.target.id : event.id;
+  const isChecked = event.target
+    ? event.target.checked
+    : (event.checked = !event.checked);
   model.changeOptionCheckedState(inputTargetID, isChecked);
   summaryViewer.renderSummaryOptionCont(inputTargetID, isChecked);
   renderFinalPrice();
