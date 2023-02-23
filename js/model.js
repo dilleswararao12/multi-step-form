@@ -6,6 +6,13 @@ export const state = {
   onlineServiceChecked: false,
   largerStorageChecked: false,
   customProfileChecked: false,
+  arcadePrices: { monthly: 9, yearly: 90 },
+  advancedPrices: { monthly: 12, yearly: 120 },
+  proPrices: { monthly: 15, yearly: 150 },
+  onlinePrices: { monthly: 1, yearly: 10 },
+  storagePrices: { monthly: 2, yearly: 20 },
+  customPrices: { monthly: 2, yearly: 20 },
+  totalPrice: null,
 };
 
 export function incrementCurrStep() {
@@ -30,4 +37,33 @@ export function changeOptionCheckedState(target, checkboxStatus) {
   } else {
     state.customProfileChecked = checkboxStatus;
   }
+}
+
+export function totalPriceCalc() {
+  state.totalPrice = 0;
+  const plan = state.currPlan;
+  if (state.isMonthly) {
+    if (plan === "arcade") state.totalPrice += state.arcadePrices["monthly"];
+    else if (plan === "advanced")
+      state.totalPrice += state.advancedPrices["monthly"];
+    else state.totalPrice += state.proPrices["monthly"];
+    if (state.onlineServiceChecked)
+      state.totalPrice += state.onlinePrices["monthly"];
+    if (state.largerStorageChecked)
+      state.totalPrice += state.storagePrices["monthly"];
+    if (state.customProfileChecked)
+      state.totalPrice += state.customPrices["monthly"];
+  } else {
+    if (plan === "arcade") state.totalPrice += state.arcadePrices["yearly"];
+    else if (plan === "advanced")
+      state.totalPrice += state.advancedPrices["yearly"];
+    else state.totalPrice += state.proPrices["yearly"];
+    if (state.onlineServiceChecked)
+      state.totalPrice += state.onlinePrices["yearly"];
+    if (state.largerStorageChecked)
+      state.totalPrice += state.storagePrices["yearly"];
+    if (state.customProfileChecked)
+      state.totalPrice += state.customPrices["yearly"];
+  }
+  console.log(state.totalPrice);
 }

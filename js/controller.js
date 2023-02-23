@@ -31,13 +31,16 @@ function controlPlanOption() {
   const planIndex = planViewer.getCurrentPlan();
   model.changeCurrentPlan(planIndex);
   controlSummaryPrimaryEl();
+  renderFinalPrice();
 }
 
 function controlMonthlyRender() {
   planViewer.renderMontlyYearlyEl();
   model.state.isMonthly = !model.state.isMonthly;
   addonViewer.renderPriceEl(model.state.isMonthly);
+  summaryViewer.renderFinalSummaryDate(model.state.isMonthly);
   controlSummaryPrimaryEl();
+  renderFinalPrice();
   const [onlinePrice, storagePrice, customPrice] = [
     addonViewer.onlinePriceEl.textContent,
     addonViewer.storagePriceEl.textContent,
@@ -55,6 +58,7 @@ function controlCheckBoxState(event) {
   const isChecked = event.target.checked;
   model.changeOptionCheckedState(inputTargetID, isChecked);
   summaryViewer.renderSummaryOptionCont(inputTargetID, isChecked);
+  renderFinalPrice();
 }
 
 function controlSummaryPrimaryEl() {
@@ -74,6 +78,14 @@ function controlSummaryPrimaryEl() {
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
   sectionViewer.renderSection(prev, curr);
+}
+
+function renderFinalPrice() {
+  model.totalPriceCalc();
+  summaryViewer.renderFinalSummaryPrice(
+    model.state.totalPrice,
+    model.state.isMonthly
+  );
 }
 function init() {
   navigationViewer.addHandlerRender(controlRender);

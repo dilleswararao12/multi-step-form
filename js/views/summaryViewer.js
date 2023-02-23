@@ -6,6 +6,9 @@ class summaryViewer {
     this.primarySummaryPrice = document.querySelector(
       ".summary-section__primary-summary"
     );
+    this.changeElement = document.querySelector(
+      ".summary-section__primary-change"
+    );
 
     this.summaryOnlineCont = document.getElementById("summary-online");
     this.summaryStorageCont = document.getElementById("summary-storage");
@@ -17,6 +20,13 @@ class summaryViewer {
       this.summaryCustomContPrice,
     ] = Array.from(
       document.querySelectorAll(".summary-section__add-ons-price")
+    );
+
+    this.finalSummaryDate = document.querySelector(
+      ".summary-section__cont-summary-date"
+    );
+    this.finalSummaryPrice = document.querySelector(
+      ".summary-section__cont-summary-price"
     );
   }
 
@@ -41,6 +51,18 @@ class summaryViewer {
     this.summaryOnlineContPrice.textContent = onlinePrice;
     this.summaryStorageContPrice.textContent = storagePrice;
     this.summaryCustomContPrice.textContent = customPrice;
+  }
+
+  renderFinalSummaryDate(isMonthly) {
+    if (isMonthly) {
+      this.finalSummaryDate.textContent = "Total (per month)";
+    } else {
+      this.finalSummaryDate.textContent = "Total (per year)";
+    }
+  }
+
+  renderFinalSummaryPrice(price, isMonthly) {
+    this.finalSummaryPrice.textContent = `$${price}/${isMonthly ? "mo" : "yr"}`;
   }
 }
 
