@@ -46,7 +46,7 @@
               <label for="email">Email Address</label>
               <input
                 class="personal-info-form__input"
-                type="text"
+                type="email"
                 required
                 name="email"
                 id="email"
@@ -57,11 +57,12 @@
               <label for="phone">Phone Number</label>
               <input
                 class="personal-info-form__input"
-                type="text"
+                type="tel"
                 required
                 name="phone"
                 id="phone"
                 placeholder="e.g. +1 234 567 890"
+                pattern="\+[0-9]{1,} [0-9]{3} [0-9]{3} [0-9]{3}"
               />
             </div>
           </div>
