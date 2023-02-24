@@ -30,6 +30,15 @@ class summaryViewer {
     );
   }
 
+  addHandlerChangeElClick(handler) {
+    this.changeElement.addEventListener("click", handler);
+    this.changeElement.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        handler();
+      }
+    });
+  }
+
   renderPrimaryEl(currPlan, isMonthly, price) {
     const capitalized = currPlan?.charAt(0).toUpperCase() + currPlan?.slice(1);
     const datePlan = isMonthly ? "Monthly" : "Yearly";

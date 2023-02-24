@@ -25,6 +25,14 @@ export function decrementCurrstep() {
   state.currStep--;
 }
 
+export function changeCurrentStep(newStep) {
+  state.currStep = newStep;
+}
+
+export function toggleIsMonthly() {
+  state.isMonthly = !state.isMonthly;
+}
+
 export function changeCurrentPlan(key) {
   state.currPlan = state.optionPlans[key];
 }

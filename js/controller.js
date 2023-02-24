@@ -36,7 +36,7 @@ function controlPlanOption() {
 
 function controlMonthlyRender() {
   planViewer.renderMontlyYearlyEl();
-  model.state.isMonthly = !model.state.isMonthly;
+  model.toggleIsMonthly();
   addonViewer.renderPriceEl(model.state.isMonthly);
   summaryViewer.renderFinalSummaryDate(model.state.isMonthly);
   controlSummaryPrimaryEl();
@@ -77,6 +77,12 @@ function controlSummaryPrimaryEl() {
   );
 }
 
+function controlChangeEl() {
+  const prevElPosition = model.state.currStep;
+  model.changeCurrentStep(1);
+  renderElements(prevElPosition, model.state.currStep);
+}
+
 function renderElements(prev, curr) {
   navigationViewer.stepItemRender(prev, curr);
   sectionViewer.renderSection(prev, curr);
@@ -97,6 +103,7 @@ function init() {
   planViewer.addHandlerPlanClick(controlPlanOption);
   planViewer.addHandlerCheckClick(controlMonthlyRender);
   addonViewer.addHandlerClickCheckBox(controlCheckBoxState);
+  summaryViewer.addHandlerChangeElClick(controlChangeEl);
 }
 
 init();
