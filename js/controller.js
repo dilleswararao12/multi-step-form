@@ -89,7 +89,23 @@ function isFormValid(currForm) {
   if (currForm === 0) {
     return personalViewer.renderError();
   } else if (currForm === 1) {
+    if (!model.state.currPlan) {
+      alert("Please Select a Plan!");
+      return false;
+    }
+    return true;
+  } else if (currForm === 2) {
+    if (
+      !model.state.onlineServiceChecked &&
+      !model.state.largerStorageChecked &&
+      !model.state.customProfileChecked
+    ) {
+      alert("Please Check at least One Box");
+      return false;
+    }
+    return true;
   }
+  return true;
 }
 
 function renderElements(prev, curr) {
