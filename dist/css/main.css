@@ -92,6 +92,10 @@ input:focus {
   border: 1px solid #473dff;
 }
 
+.hidden {
+  display: none;
+}
+
 .steps-list-mobile {
   display: flex;
   justify-content: center;
@@ -137,10 +141,17 @@ input:focus {
 }
 
 .personal-info-form__cont div {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 1.2rem;
+}
+.personal-info-form__cont div .personal-info-form__label-cont {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  justify-content: space-between;
 }
 
 .personal-info-form__input {
@@ -161,6 +172,19 @@ input:focus {
   font-weight: 500;
   opacity: 1;
   color: #9699ab;
+}
+.personal-info-form__input.error {
+  border: 1px solid #ed3548;
+}
+
+.personal-info-form__error {
+  color: #ed3548;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#personal-info-form-submit {
+  display: none;
 }
 
 .select-your-plan-form__cont {

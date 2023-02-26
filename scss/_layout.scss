@@ -41,10 +41,18 @@
 
 .personal-info-form__cont {
   div {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     margin-bottom: 1.2rem;
+
+    .personal-info-form__label-cont {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -62,6 +70,20 @@
     opacity: 1;
     color: $neutral-cool-gray;
   }
+
+  &.error {
+    border: 1px solid $primary-strawberry-red;
+  }
+}
+
+.personal-info-form__error {
+  color: $primary-strawberry-red;
+  font-size: 1.2rem;
+  font-weight: weight("bold");
+}
+
+#personal-info-form-submit {
+  display: none;
 }
 
 // PLAN FORM SECTION

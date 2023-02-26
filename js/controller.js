@@ -4,12 +4,14 @@ import planViewer from "./views/planViewer.js";
 import sectionViewer from "./views/sectionViewer.js";
 import addonViewer from "./views/addonViewer.js";
 import summaryViewer from "./views/summaryViewer.js";
+import personalViewer from "./views/personalViewer.js";
 
 function controlRender() {
   renderElements(null, null);
 }
 
 function controlNextButton() {
+  if (!isFormValid(model.state.currStep)) return;
   const prevElPosition = model.state.currStep;
   model.incrementCurrStep();
   renderElements(prevElPosition, model.state.currStep);
@@ -81,6 +83,13 @@ function controlChangeEl() {
   const prevElPosition = model.state.currStep;
   model.changeCurrentStep(1);
   renderElements(prevElPosition, model.state.currStep);
+}
+
+function isFormValid(currForm) {
+  if (currForm === 0) {
+    return personalViewer.renderError();
+  } else if (currForm === 1) {
+  }
 }
 
 function renderElements(prev, curr) {
