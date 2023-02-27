@@ -25,6 +25,10 @@
   color: $neutral-cool-gray;
   font-size: 1.5rem;
   line-height: 2.3rem;
+
+  @include desktop() {
+    width: 90%;
+  }
 }
 
 .btn {

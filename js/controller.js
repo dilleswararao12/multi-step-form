@@ -123,19 +123,22 @@ function renderFinalPrice() {
 
 function controlResize() {
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= "950") {
-      console.log(window.innerWidth);
-      sectionViewer.formsContainer.insertAdjacentElement(
-        "beforeend",
-        navigationViewer.navMobileEl
-      );
-    } else {
-      sectionViewer.mainElement.insertAdjacentElement(
-        "beforeend",
-        navigationViewer.navMobileEl
-      );
-    }
+    resizeWindow();
   });
+}
+
+function resizeWindow() {
+  if (window.innerWidth >= "950") {
+    sectionViewer.formsContainer.insertAdjacentElement(
+      "beforeend",
+      navigationViewer.navMobileEl
+    );
+  } else {
+    sectionViewer.mainElement.insertAdjacentElement(
+      "beforeend",
+      navigationViewer.navMobileEl
+    );
+  }
 }
 function init() {
   navigationViewer.addHandlerRender(controlRender);
@@ -147,6 +150,7 @@ function init() {
   addonViewer.addHandlerClickCheckBox(controlCheckBoxState);
   summaryViewer.addHandlerChangeElClick(controlChangeEl);
   controlResize();
+  resizeWindow();
 }
 
 init();

@@ -43,6 +43,7 @@
   padding: 3rem 3rem;
   width: 45%;
   border-radius: 1rem;
+  height: 56.8rem;
   max-width: 27.4rem;
 
   @include desktop() {
@@ -96,7 +97,12 @@
     display: flex;
     gap: 7rem;
     max-width: 94rem;
+    margin-top: 12rem;
   }
+}
+
+.forms-container {
+  position: relative;
 }
 
 .personal-info-form__cont {
@@ -152,12 +158,29 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+
+  @include desktop() {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+
+    .option-component {
+      width: 100%;
+      max-width: 14rem;
+    }
+  }
 }
 
 .select-your-plan-form__item {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  @include desktop() {
+    align-items: baseline;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
 
   div {
     display: flex;
@@ -481,7 +504,7 @@
 
   @include desktop() {
     padding: 0;
-    position: static;
+    position: absolute;
   }
 
   .next-step-btn {
