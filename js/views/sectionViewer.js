@@ -7,6 +7,9 @@ class sectionViewer {
       document.getElementById("summary-section"),
       document.getElementById("thank-you-section"),
     ];
+
+    this.formsContainer = document.querySelector(".forms-container");
+    this.mainElement = document.querySelector("main");
   }
 
   renderSection(prevElIndex, currElIndex) {

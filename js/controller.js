@@ -120,6 +120,23 @@ function renderFinalPrice() {
     model.state.isMonthly
   );
 }
+
+function controlResize() {
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= "950") {
+      console.log(window.innerWidth);
+      sectionViewer.formsContainer.insertAdjacentElement(
+        "beforeend",
+        navigationViewer.navMobileEl
+      );
+    } else {
+      sectionViewer.mainElement.insertAdjacentElement(
+        "beforeend",
+        navigationViewer.navMobileEl
+      );
+    }
+  });
+}
 function init() {
   navigationViewer.addHandlerRender(controlRender);
   navigationViewer.addHandlerNextClick(controlNextButton);
@@ -129,6 +146,7 @@ function init() {
   planViewer.addHandlerCheckClick(controlMonthlyRender);
   addonViewer.addHandlerClickCheckBox(controlCheckBoxState);
   summaryViewer.addHandlerChangeElClick(controlChangeEl);
+  controlResize();
 }
 
 init();

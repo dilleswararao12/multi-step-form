@@ -3,6 +3,9 @@ class navigationViewer {
     this.stepsMobileItems = document.querySelectorAll(
       ".steps-list-mobile__item"
     );
+    this.stepsDesktopItems = document.querySelectorAll(
+      ".steps-list-desktop__item-number"
+    );
     this.nextButton = document.querySelector(".next-step-btn");
     this.backEl = document.querySelector(".back-par");
     this.confirmButton = document.querySelector(".confirm-btn");
@@ -35,15 +38,21 @@ class navigationViewer {
   }
 
   stepItemRender(prevElIndex, currElIndex) {
-    const currStepEl =
+    const currStepElMobile =
       prevElIndex === null ? null : this.stepsMobileItems[prevElIndex];
-    if (currStepEl) {
-      currStepEl.classList.remove("active");
+
+    const currStepElDesktop =
+      prevElIndex === null ? null : this.stepsDesktopItems[prevElIndex];
+    if (currStepElMobile) {
+      currStepElMobile.classList.remove("active");
+      currStepElDesktop.classList.remove("active");
       const nextElementPosition = currElIndex;
       this.stepsMobileItems[nextElementPosition].classList.add("active");
+      this.stepsDesktopItems[nextElementPosition].classList.add("active");
       this.renderNavElements(currElIndex);
     } else {
       this.stepsMobileItems[0].classList.add("active");
+      this.stepsDesktopItems[0].classList.add("active");
     }
   }
 

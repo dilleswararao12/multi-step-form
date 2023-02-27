@@ -23,263 +23,330 @@
         <li class="steps-list-mobile__item"><p>4</p></li>
       </ul>
       <div class="form-container">
-        <form id="personal-info-form" class="section">
-          <div class="form-heading-cont">
-            <h2 class="form-heading-cont__header">Personal info</h2>
-            <p class="form-heading-cont__subheader">
-              Please provide your name, email address, and phone number.
-            </p>
-          </div>
-          <div class="personal-info-form__cont">
-            <div>
-              <div class="personal-info-form__label-cont">
-                <label for="name">Name</label>
-                <p class="personal-info-form__error hidden" id="name-error">
-                  This field is required
-                </p>
+        <div class="steps-list-desktop__cont">
+          <ul class="steps-list-desktop__list">
+            <li class="steps-list-desktop__item">
+              <div class="steps-list-desktop__item-number">
+                <p>1</p>
               </div>
 
-              <input
-                class="personal-info-form__input"
-                type="text"
-                required
-                name="name"
-                id="name"
-                placeholder="e.g. Stephen King"
-              />
-            </div>
-            <div>
-              <div class="personal-info-form__label-cont">
-                <label for="email">Email Address</label>
-                <p class="personal-info-form__error hidden" id="email-error">
-                  This field is required
+              <div class="steps-list-desktop__item-text-cont">
+                <p class="steps-list-desktop__item-text-step">STEP 1</p>
+                <p class="steps-list-desktop__item-text-description">
+                  YOUR INFO
                 </p>
               </div>
+            </li>
+            <li class="steps-list-desktop__item">
+              <div class="steps-list-desktop__item-number">
+                <p>2</p>
+              </div>
 
-              <input
-                class="personal-info-form__input"
-                type="email"
-                required
-                name="email"
-                id="email"
-                placeholder="e.g. stephenking@lorem.com"
-              />
-            </div>
-            <div>
-              <div class="personal-info-form__label-cont">
-                <label for="phone">Phone Number</label>
-                <p class="personal-info-form__error hidden" id="phone-error">
-                  This field is required
+              <div class="steps-list-desktop__item-text-cont">
+                <p class="steps-list-desktop__item-text-step">STEP 2</p>
+                <p class="steps-list-desktop__item-text-description">
+                  SELECT PLAN
                 </p>
               </div>
+            </li>
+            <li class="steps-list-desktop__item">
+              <div class="steps-list-desktop__item-number">
+                <p>3</p>
+              </div>
 
-              <input
-                class="personal-info-form__input"
-                type="tel"
-                required
-                name="phone"
-                id="phone"
-                placeholder="e.g. +1 234 567 890"
-                pattern="\+[0-9]{1,} [0-9]{3} [0-9]{3} [0-9]{3}"
-              />
-            </div>
-          </div>
-        </form>
-        <div id="select-your-plan-form" class="section">
-          <div class="form-heading-cont">
-            <h2 class="form-heading-cont__header">Select your plan</h2>
-            <p class="form-heading-cont__subheader">
-              You have the option of monthly or yearly billing.
-            </p>
-          </div>
-          <div class="select-your-plan-form__cont">
-            <div class="option-component" role="button" tabindex="0">
-              <div class="select-your-plan-form__item">
-                <img
-                  src="./dist/assets/images/icon-arcade.svg"
-                  alt="arcade icon"
-                />
-                <div>
-                  <p class="select-your-plan-form__item-title">Arcade</p>
-                  <p
-                    class="select-your-plan-form__item-description"
-                    id="arcade-price"
-                  >
-                    $9/mo
-                  </p>
-                  <p class="select-your-plan-form__item-free">2 months free</p>
-                </div>
+              <div class="steps-list-desktop__item-text-cont">
+                <p class="steps-list-desktop__item-text-step">STEP 3</p>
+                <p class="steps-list-desktop__item-text-description">ADD-ONS</p>
               </div>
-            </div>
-            <div class="option-component" role="button" tabindex="0">
-              <div class="select-your-plan-form__item">
-                <img
-                  src="./dist/assets/images/icon-advanced.svg"
-                  alt="advanced icon"
-                />
-                <div>
-                  <p class="select-your-plan-form__item-title">Advanced</p>
-                  <p
-                    class="select-your-plan-form__item-description"
-                    id="advanced-price"
-                  >
-                    $12/mo
-                  </p>
-                  <p class="select-your-plan-form__item-free">2 months free</p>
-                </div>
+            </li>
+            <li class="steps-list-desktop__item">
+              <div class="steps-list-desktop__item-number">
+                <p>4</p>
               </div>
-            </div>
-            <div class="option-component" role="button" tabindex="0">
-              <div class="select-your-plan-form__item">
-                <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
-                <div>
-                  <p class="select-your-plan-form__item-title">Pro</p>
-                  <p
-                    class="select-your-plan-form__item-description"
-                    id="pro-price"
-                  >
-                    $15/mo
-                  </p>
-                  <p class="select-your-plan-form__item-free">2 months free</p>
-                </div>
+
+              <div class="steps-list-desktop__item-text-cont">
+                <p class="steps-list-desktop__item-text-step">STEP 4</p>
+                <p class="steps-list-desktop__item-text-description">SUMMARY</p>
               </div>
+            </li>
+          </ul>
+        </div>
+        <div class="forms-container">
+          <form id="personal-info-form" class="section">
+            <div class="form-heading-cont">
+              <h2 class="form-heading-cont__header">Personal info</h2>
+              <p class="form-heading-cont__subheader">
+                Please provide your name, email address, and phone number.
+              </p>
             </div>
-          </div>
-          <form id="monthly-yearly-form">
-            <div>
-              <p class="monthly active">Monthly</p>
-              <label class="switch" for="monthly-yearly" tabindex="0">
+            <div class="personal-info-form__cont">
+              <div>
+                <div class="personal-info-form__label-cont">
+                  <label for="name">Name</label>
+                  <p class="personal-info-form__error hidden" id="name-error">
+                    This field is required
+                  </p>
+                </div>
+
                 <input
-                  type="checkbox"
-                  name="monthly-yearly"
-                  id="monthly-yearly"
+                  class="personal-info-form__input"
+                  type="text"
+                  required
+                  name="name"
+                  id="name"
+                  placeholder="e.g. Stephen King"
                 />
-                <span class="slider-round"></span>
-              </label>
+              </div>
+              <div>
+                <div class="personal-info-form__label-cont">
+                  <label for="email">Email Address</label>
+                  <p class="personal-info-form__error hidden" id="email-error">
+                    This field is required
+                  </p>
+                </div>
 
-              <p class="yearly">Yearly</p>
+                <input
+                  class="personal-info-form__input"
+                  type="email"
+                  required
+                  name="email"
+                  id="email"
+                  placeholder="e.g. stephenking@lorem.com"
+                />
+              </div>
+              <div>
+                <div class="personal-info-form__label-cont">
+                  <label for="phone">Phone Number</label>
+                  <p class="personal-info-form__error hidden" id="phone-error">
+                    This field is required
+                  </p>
+                </div>
+
+                <input
+                  class="personal-info-form__input"
+                  type="tel"
+                  required
+                  name="phone"
+                  id="phone"
+                  placeholder="e.g. +1 234 567 890"
+                  pattern="\+[0-9]{1,} [0-9]{3} [0-9]{3} [0-9]{3}"
+                />
+              </div>
             </div>
           </form>
-        </div>
-        <form id="add-ons-form" class="section">
-          <div class="form-heading-cont">
-            <h2 class="form-heading-cont__header">Pick add-ons</h2>
-            <p class="form-heading-cont__subheader">
-              Add-ons help enchance your gaming experience.
-            </p>
-          </div>
-          <div class="add-ons-form__cont">
-            <label class="option-component" for="online" tabindex="0">
-              <div class="add-ons-form__item">
-                <div class="checkbox-cont">
-                  <input type="checkbox" name="online" id="online" />
-                  <span class="mark"></span>
-                </div>
-                <div class="add-ons-form__item-text">
-                  <p class="add-ons-form__item-title">Online service</p>
-                  <p class="add-ons-form__item-description">
-                    Access to multiplayer games
-                  </p>
-                </div>
-                <p class="add-ons-form__item-price">+$1/mo</p>
-              </div>
-            </label>
-            <label class="option-component" for="storage" tabindex="0">
-              <div class="add-ons-form__item">
-                <div class="checkbox-cont">
-                  <input type="checkbox" name="storage" id="storage" />
-                  <span class="mark"></span>
-                </div>
-                <div class="add-ons-form__item-text">
-                  <p class="add-ons-form__item-title">Larger storage</p>
-                  <p class="add-ons-form__item-description">
-                    Extra 1TB of cloud save
-                  </p>
-                </div>
-                <p class="add-ons-form__item-price">+$2/mo</p>
-              </div>
-            </label>
-            <label class="option-component" for="custom" tabindex="0">
-              <div class="add-ons-form__item">
-                <div class="checkbox-cont">
-                  <input type="checkbox" name="custom" id="custom" />
-                  <span class="mark"></span>
-                </div>
-                <div class="add-ons-form__item-text">
-                  <p class="add-ons-form__item-title">Customizable profile</p>
-                  <p class="add-ons-form__item-description">
-                    Custom theme on your profile
-                  </p>
-                </div>
-                <p class="add-ons-form__item-price">+$2/mo</p>
-              </div>
-            </label>
-          </div>
-        </form>
-
-        <div id="summary-section" class="section">
-          <div class="form-heading-cont">
-            <h2 class="form-heading-cont__header">Finishing up</h2>
-            <p class="form-heading-cont__subheader">
-              Double-check everything looks OK before confirming.
-            </p>
-          </div>
-          <div class="summary-section__cont">
-            <div class="summary-section__cont-options">
-              <div class="summary-section__cont-options-primary">
-                <div>
-                  <p class="summary-section__primary-text">Arcade (Monthly)</p>
-                  <p
-                    class="summary-section__primary-change"
-                    tabindex="0"
-                    role="link"
-                  >
-                    Change
-                  </p>
-                </div>
-                <p class="summary-section__primary-summary">$9/mo</p>
-              </div>
-              <hr />
-              <div class="summary-section__add-ons">
-                <div class="summary-section__add-ons-cont" id="summary-online">
-                  <p class="summary-section__add-ons-text">Online service</p>
-                  <p class="summary-section__add-ons-price">+$1/mo</p>
-                </div>
-                <div class="summary-section__add-ons-cont" id="summary-storage">
-                  <p class="summary-section__add-ons-text">Larger storage</p>
-                  <p class="summary-section__add-ons-price">+$2/mo</p>
-                </div>
-                <div class="summary-section__add-ons-cont" id="summary-custom">
-                  <p class="summary-section__add-ons-text">
-                    Customizable profile
-                  </p>
-                  <p class="summary-section__add-ons-price">+$2/mo</p>
-                </div>
-              </div>
-            </div>
-            <div class="summary-section__cont-summary">
-              <p class="summary-section__cont-summary-date">
-                Total (per month)
+          <div id="select-your-plan-form" class="section">
+            <div class="form-heading-cont">
+              <h2 class="form-heading-cont__header">Select your plan</h2>
+              <p class="form-heading-cont__subheader">
+                You have the option of monthly or yearly billing.
               </p>
-              <span class="summary-section__cont-summary-price">+$12/mo</span>
+            </div>
+            <div class="select-your-plan-form__cont">
+              <div class="option-component" role="button" tabindex="0">
+                <div class="select-your-plan-form__item">
+                  <img
+                    src="./dist/assets/images/icon-arcade.svg"
+                    alt="arcade icon"
+                  />
+                  <div>
+                    <p class="select-your-plan-form__item-title">Arcade</p>
+                    <p
+                      class="select-your-plan-form__item-description"
+                      id="arcade-price"
+                    >
+                      $9/mo
+                    </p>
+                    <p class="select-your-plan-form__item-free">
+                      2 months free
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="option-component" role="button" tabindex="0">
+                <div class="select-your-plan-form__item">
+                  <img
+                    src="./dist/assets/images/icon-advanced.svg"
+                    alt="advanced icon"
+                  />
+                  <div>
+                    <p class="select-your-plan-form__item-title">Advanced</p>
+                    <p
+                      class="select-your-plan-form__item-description"
+                      id="advanced-price"
+                    >
+                      $12/mo
+                    </p>
+                    <p class="select-your-plan-form__item-free">
+                      2 months free
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="option-component" role="button" tabindex="0">
+                <div class="select-your-plan-form__item">
+                  <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
+                  <div>
+                    <p class="select-your-plan-form__item-title">Pro</p>
+                    <p
+                      class="select-your-plan-form__item-description"
+                      id="pro-price"
+                    >
+                      $15/mo
+                    </p>
+                    <p class="select-your-plan-form__item-free">
+                      2 months free
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form id="monthly-yearly-form">
+              <div>
+                <p class="monthly active">Monthly</p>
+                <label class="switch" for="monthly-yearly" tabindex="0">
+                  <input
+                    type="checkbox"
+                    name="monthly-yearly"
+                    id="monthly-yearly"
+                  />
+                  <span class="slider-round"></span>
+                </label>
+
+                <p class="yearly">Yearly</p>
+              </div>
+            </form>
+          </div>
+          <form id="add-ons-form" class="section">
+            <div class="form-heading-cont">
+              <h2 class="form-heading-cont__header">Pick add-ons</h2>
+              <p class="form-heading-cont__subheader">
+                Add-ons help enchance your gaming experience.
+              </p>
+            </div>
+            <div class="add-ons-form__cont">
+              <label class="option-component" for="online" tabindex="0">
+                <div class="add-ons-form__item">
+                  <div class="checkbox-cont">
+                    <input type="checkbox" name="online" id="online" />
+                    <span class="mark"></span>
+                  </div>
+                  <div class="add-ons-form__item-text">
+                    <p class="add-ons-form__item-title">Online service</p>
+                    <p class="add-ons-form__item-description">
+                      Access to multiplayer games
+                    </p>
+                  </div>
+                  <p class="add-ons-form__item-price">+$1/mo</p>
+                </div>
+              </label>
+              <label class="option-component" for="storage" tabindex="0">
+                <div class="add-ons-form__item">
+                  <div class="checkbox-cont">
+                    <input type="checkbox" name="storage" id="storage" />
+                    <span class="mark"></span>
+                  </div>
+                  <div class="add-ons-form__item-text">
+                    <p class="add-ons-form__item-title">Larger storage</p>
+                    <p class="add-ons-form__item-description">
+                      Extra 1TB of cloud save
+                    </p>
+                  </div>
+                  <p class="add-ons-form__item-price">+$2/mo</p>
+                </div>
+              </label>
+              <label class="option-component" for="custom" tabindex="0">
+                <div class="add-ons-form__item">
+                  <div class="checkbox-cont">
+                    <input type="checkbox" name="custom" id="custom" />
+                    <span class="mark"></span>
+                  </div>
+                  <div class="add-ons-form__item-text">
+                    <p class="add-ons-form__item-title">Customizable profile</p>
+                    <p class="add-ons-form__item-description">
+                      Custom theme on your profile
+                    </p>
+                  </div>
+                  <p class="add-ons-form__item-price">+$2/mo</p>
+                </div>
+              </label>
+            </div>
+          </form>
+
+          <div id="summary-section" class="section">
+            <div class="form-heading-cont">
+              <h2 class="form-heading-cont__header">Finishing up</h2>
+              <p class="form-heading-cont__subheader">
+                Double-check everything looks OK before confirming.
+              </p>
+            </div>
+            <div class="summary-section__cont">
+              <div class="summary-section__cont-options">
+                <div class="summary-section__cont-options-primary">
+                  <div>
+                    <p class="summary-section__primary-text">
+                      Arcade (Monthly)
+                    </p>
+                    <p
+                      class="summary-section__primary-change"
+                      tabindex="0"
+                      role="link"
+                    >
+                      Change
+                    </p>
+                  </div>
+                  <p class="summary-section__primary-summary">$9/mo</p>
+                </div>
+                <hr />
+                <div class="summary-section__add-ons">
+                  <div
+                    class="summary-section__add-ons-cont"
+                    id="summary-online"
+                  >
+                    <p class="summary-section__add-ons-text">Online service</p>
+                    <p class="summary-section__add-ons-price">+$1/mo</p>
+                  </div>
+                  <div
+                    class="summary-section__add-ons-cont"
+                    id="summary-storage"
+                  >
+                    <p class="summary-section__add-ons-text">Larger storage</p>
+                    <p class="summary-section__add-ons-price">+$2/mo</p>
+                  </div>
+                  <div
+                    class="summary-section__add-ons-cont"
+                    id="summary-custom"
+                  >
+                    <p class="summary-section__add-ons-text">
+                      Customizable profile
+                    </p>
+                    <p class="summary-section__add-ons-price">+$2/mo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-section__cont-summary">
+                <p class="summary-section__cont-summary-date">
+                  Total (per month)
+                </p>
+                <span class="summary-section__cont-summary-price">+$12/mo</span>
+              </div>
+            </div>
+          </div>
+          <div id="thank-you-section" class="section">
+            <img
+              src="./dist/assets/images/icon-thank-you.svg"
+              alt="thank you icon"
+            />
+            <div>
+              <h2>Thank you!</h2>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </p>
             </div>
           </div>
         </div>
-        <div id="thank-you-section" class="section">
-          <img
-            src="./dist/assets/images/icon-thank-you.svg"
-            alt="thank you icon"
-          />
-          <div>
-            <h2>Thank you!</h2>
-            <p>
-              Thanks for confirming your subscription! We hope you have fun
-              using our platform. If you ever need support, please feel free to
-              email us at support@loremgaming.com.
-            </p>
-          </div>
-        </div>
-        <main>
+        <div>
           <div class="nav-mobile">
             <div>
               <p class="back-par" role="button" tabindex="0">Go Back</p>
@@ -290,7 +357,7 @@
           <body>
             <html></html>
           </body>
-        </main>
+        </div>
       </div>
     </main>
   </body>

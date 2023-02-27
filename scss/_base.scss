@@ -34,6 +34,10 @@ $font-weigths: (
 @mixin center() {
   width: 90%;
   margin: 0 auto;
+
+  @include desktop() {
+    width: 70%;
+  }
 }
 
 @mixin focus() {
@@ -43,6 +47,12 @@ $font-weigths: (
 
 @mixin outline() {
   outline: 1px solid $primary-purplish-blue;
+}
+
+@mixin desktop {
+  @media (min-width: 59.375em) {
+    @content;
+  }
 }
 
 * {
@@ -60,7 +70,12 @@ body {
   position: relative;
   background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   background-color: $primary-bg;
+
+  @include desktop() {
+    background-image: none;
+  }
 }
 
 main {

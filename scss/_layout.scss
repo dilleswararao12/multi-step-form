@@ -6,6 +6,10 @@
   list-style: none;
   gap: 1.5rem;
   margin-bottom: 3.8rem;
+
+  @include desktop() {
+    display: none;
+  }
 }
 
 .steps-list-mobile__item {
@@ -30,6 +34,55 @@
   }
 }
 
+.steps-list-desktop__cont {
+  display: none;
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 3rem 3rem;
+  width: 45%;
+  border-radius: 1rem;
+  max-width: 27.4rem;
+
+  @include desktop() {
+    display: block;
+  }
+
+  .steps-list-desktop__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+  }
+}
+
+.steps-list-desktop__item {
+  display: flex;
+  gap: 1rem;
+
+  #{&}-text-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  #{&}-text-step {
+    font-size: 1.2rem;
+    color: $primary-light-blue;
+  }
+
+  #{&}-text-description {
+    font-size: 1.4rem;
+    color: $neutral-white;
+    font-weight: weight("bold");
+  }
+
+  #{&}-number {
+    @extend .steps-list-mobile__item;
+  }
+}
+
 // FORM CONTAINER
 .form-container {
   @include center();
@@ -37,6 +90,13 @@
   padding: 3rem 2.2rem;
   border-radius: 1rem;
   box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.1);
+  max-width: 54rem;
+
+  @include desktop() {
+    display: flex;
+    gap: 7rem;
+    max-width: 94rem;
+  }
 }
 
 .personal-info-form__cont {
@@ -419,6 +479,11 @@
   left: 0;
   bottom: 0;
 
+  @include desktop() {
+    padding: 0;
+    position: static;
+  }
+
   .next-step-btn {
     background-color: $primary-marine-blue;
     &:hover {
@@ -444,6 +509,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include desktop() {
+      width: 100%;
+    }
 
     p {
       font-weight: weight("medium");
