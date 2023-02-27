@@ -457,12 +457,19 @@
   .summary-section__primary-summary {
     color: $primary-marine-blue;
     font-weight: weight("bold");
+    @include desktop() {
+      font-size: 1.6rem;
+    }
   }
 }
 
 .summary-section__primary-text {
   color: $primary-marine-blue;
   font-weight: weight("bold");
+
+  @include desktop() {
+    font-size: 1.6rem !important;
+  }
 
   & + p {
     color: $neutral-cool-gray;
@@ -509,12 +516,20 @@
     font-size: 1.6rem;
     color: $primary-purplish-blue;
     font-weight: weight("bold");
+
+    @include desktop() {
+      font-size: 2rem;
+    }
   }
 }
 
 .summary-section__primary-change {
   &:focus-visible {
     @include outline();
+  }
+
+  &:hover {
+    color: $primary-purplish-blue;
   }
 }
 // THANK YOU SECTION
@@ -533,17 +548,30 @@
   img {
     width: 5.6rem;
     height: 5.6rem;
+
+    @include desktop() {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 
   h2 {
     font-size: 2.4rem;
     color: $primary-marine-blue;
     text-align: center;
+
+    @include desktop() {
+      font-size: 3.2rem;
+    }
   }
   p {
     font-size: 1.6rem;
     color: $neutral-cool-gray;
     text-align: center;
+
+    @include desktop() {
+      line-height: 1.5;
+    }
   }
 
   &.active {
