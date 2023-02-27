@@ -13,11 +13,19 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1.5rem;
+
+  @include desktop() {
+    margin-bottom: 3.5rem;
+  }
 }
 
 .form-heading-cont__header {
   font-size: 2.4rem;
   color: $primary-marine-blue;
+
+  @include desktop() {
+    font-size: 3.2rem;
+  }
 }
 
 .form-heading-cont__subheader {
@@ -27,7 +35,7 @@
   line-height: 2.3rem;
 
   @include desktop() {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -39,6 +47,12 @@
   padding: 1.2rem 1.8rem;
   color: $neutral-white;
   cursor: pointer;
+
+  @include desktop() {
+    padding: 1.6rem 2.2rem;
+    font-size: 1.6rem;
+    border-radius: 7px;
+  }
 
   &:focus-visible {
     @include outline();

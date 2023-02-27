@@ -54,10 +54,20 @@ input:focus {
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 59.375em) {
+  .form-heading-cont {
+    margin-bottom: 3.5rem;
+  }
+}
 
 .form-heading-cont__header {
   font-size: 2.4rem;
   color: #02295a;
+}
+@media (min-width: 59.375em) {
+  .form-heading-cont__header {
+    font-size: 3.2rem;
+  }
 }
 
 .form-heading-cont__subheader {
@@ -68,7 +78,7 @@ input:focus {
 }
 @media (min-width: 59.375em) {
   .form-heading-cont__subheader {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -80,6 +90,13 @@ input:focus {
   padding: 1.2rem 1.8rem;
   color: #ffffff;
   cursor: pointer;
+}
+@media (min-width: 59.375em) {
+  .btn {
+    padding: 1.6rem 2.2rem;
+    font-size: 1.6rem;
+    border-radius: 7px;
+  }
 }
 .btn:focus-visible {
   outline: 1px solid #473dff;
@@ -212,10 +229,22 @@ input:focus {
   }
 }
 
-.forms-container {
-  position: relative;
+@media (min-width: 59.375em) {
+  .forms-container {
+    width: 50%;
+    display: grid;
+    position: relative;
+    padding: 2rem 0;
+  }
 }
 
+@media (min-width: 59.375em) {
+  .personal-info-form__cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
 .personal-info-form__cont div {
   position: relative;
   display: flex;
@@ -229,6 +258,14 @@ input:focus {
   margin-bottom: 0;
   justify-content: space-between;
 }
+@media (min-width: 59.375em) {
+  .personal-info-form__cont div .personal-info-form__label-cont {
+    margin-bottom: 0.5rem;
+  }
+  .personal-info-form__cont div .personal-info-form__label-cont label {
+    font-size: 1.4rem;
+  }
+}
 
 .personal-info-form__input {
   font-family: "Ubuntu", sans-serif;
@@ -238,6 +275,17 @@ input:focus {
   padding: 0.8rem 1rem;
   border: 1px solid #d6d9e6;
   border-radius: 4px;
+}
+@media (min-width: 59.375em) {
+  .personal-info-form__input {
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    border-radius: 7px;
+  }
+  .personal-info-form__input:hover {
+    cursor: pointer;
+    border: 1px solid #473dff;
+  }
 }
 .personal-info-form__input::-moz-placeholder {
   font-weight: 500;
@@ -257,6 +305,11 @@ input:focus {
   color: #ed3548;
   font-size: 1.2rem;
   font-weight: 700;
+}
+@media (min-width: 59.375em) {
+  .personal-info-form__error {
+    font-size: 1.4rem;
+  }
 }
 
 #personal-info-form-submit {
@@ -278,6 +331,7 @@ input:focus {
   .select-your-plan-form__cont .option-component {
     width: 100%;
     max-width: 14rem;
+    padding: 1.8rem 1.5rem;
   }
 }
 
@@ -580,7 +634,8 @@ input:focus {
 @media (min-width: 59.375em) {
   .nav-mobile {
     padding: 0;
-    position: absolute;
+    position: static;
+    align-self: flex-end;
   }
 }
 .nav-mobile .next-step-btn {
@@ -626,6 +681,14 @@ input:focus {
   opacity: 0;
   pointer-events: none;
   cursor: pointer;
+}
+@media (min-width: 59.375em) {
+  .nav-mobile div p {
+    font-size: 1.6rem;
+  }
+  .nav-mobile div p:hover {
+    color: #02295a;
+  }
 }
 .nav-mobile div p.active {
   opacity: 1;

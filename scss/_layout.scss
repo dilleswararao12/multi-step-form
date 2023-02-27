@@ -102,10 +102,20 @@
 }
 
 .forms-container {
-  position: relative;
+  @include desktop() {
+    width: 50%;
+    display: grid;
+    position: relative;
+    padding: 2rem 0;
+  }
 }
 
 .personal-info-form__cont {
+  @include desktop() {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
   div {
     position: relative;
     display: flex;
@@ -118,6 +128,14 @@
       flex-direction: row;
       margin-bottom: 0;
       justify-content: space-between;
+
+      @include desktop() {
+        margin-bottom: 0.5rem;
+
+        label {
+          font-size: 1.4rem;
+        }
+      }
     }
   }
 }
@@ -130,6 +148,17 @@
   padding: 0.8rem 1rem;
   border: 1px solid $neutral-light-gray;
   border-radius: 4px;
+
+  @include desktop() {
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    border-radius: 7px;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $primary-purplish-blue;
+    }
+  }
 
   &::placeholder {
     font-weight: weight("medium");
@@ -146,6 +175,10 @@
   color: $primary-strawberry-red;
   font-size: 1.2rem;
   font-weight: weight("bold");
+
+  @include desktop() {
+    font-size: 1.4rem;
+  }
 }
 
 #personal-info-form-submit {
@@ -167,6 +200,7 @@
     .option-component {
       width: 100%;
       max-width: 14rem;
+      padding: 1.8rem 1.5rem;
     }
   }
 }
@@ -504,7 +538,8 @@
 
   @include desktop() {
     padding: 0;
-    position: absolute;
+    position: static;
+    align-self: flex-end;
   }
 
   .next-step-btn {
@@ -544,6 +579,14 @@
       opacity: 0;
       pointer-events: none;
       cursor: pointer;
+
+      @include desktop() {
+        font-size: 1.6rem;
+
+        &:hover {
+          color: $primary-marine-blue;
+        }
+      }
 
       &.active {
         opacity: 1;
