@@ -14,12 +14,18 @@ function controlNextButton() {
   if (!isFormValid(model.state.currStep)) return;
   const prevElPosition = model.state.currStep;
   model.incrementCurrStep();
+  navigationViewer.backEl.setAttribute("tabindex", 0);
   renderElements(prevElPosition, model.state.currStep);
 }
 
 function controlBackElement() {
   const prevElPosition = model.state.currStep;
   model.decrementCurrstep();
+  if (model.state.currStep === 0) {
+    navigationViewer.backEl.setAttribute("tabindex", -1);
+  } else {
+    navigationViewer.backEl.setAttribute("tabindex", 0);
+  }
   renderElements(prevElPosition, model.state.currStep);
 }
 

@@ -10,6 +10,8 @@ class navigationViewer {
     this.backEl = document.querySelector(".back-par");
     this.confirmButton = document.querySelector(".confirm-btn");
     this.navMobileEl = document.querySelector(".nav-mobile");
+
+    this.backEl.setAttribute("tabindex", -1);
   }
 
   addHandlerRender(handler) {

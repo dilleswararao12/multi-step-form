@@ -34,7 +34,8 @@ class addonViewer {
 
   renderCheckBox(event) {
     const target = event.target.closest(".option-component");
-
+    const targetFor = target.getAttribute("for");
+    this.attachAriaChecked(targetFor);
     if (target) {
       target.classList.toggle("is-selected");
     }
@@ -49,6 +50,26 @@ class addonViewer {
       this.onlinePriceEl.textContent = "+$10/yr";
       this.storagePriceEl.textContent = "+$20/yr";
       this.customPriceEl.textContent = "+$20/yr";
+    }
+  }
+
+  attachAriaChecked(checkboxId) {
+    if (checkboxId === "online")
+      this.addonOptions[0].setAttribute(
+        "aria-checked",
+        this.onlineCheckBox.checked
+      );
+    if (checkboxId === "storage") {
+      this.addonOptions[1].setAttribute(
+        "aria-checked",
+        this.storageCheckBox.checked
+      );
+    }
+    if (checkboxId === "custom") {
+      this.addonOptions[2].setAttribute(
+        "aria-checked",
+        this.customCheckBox.checked
+      );
     }
   }
 }

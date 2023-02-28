@@ -142,12 +142,9 @@
               </p>
             </div>
             <div class="select-your-plan-form__cont">
-              <div class="option-component" role="button" tabindex="0">
+              <div class="option-component" role="option" tabindex="0">
                 <div class="select-your-plan-form__item">
-                  <img
-                    src="./dist/assets/images/icon-arcade.svg"
-                    alt="arcade icon"
-                  />
+                  <img src="./dist/assets/images/icon-arcade.svg" alt="" />
                   <div>
                     <p class="select-your-plan-form__item-title">Arcade</p>
                     <p
@@ -162,12 +159,9 @@
                   </div>
                 </div>
               </div>
-              <div class="option-component" role="button" tabindex="0">
+              <div class="option-component" role="option" tabindex="0">
                 <div class="select-your-plan-form__item">
-                  <img
-                    src="./dist/assets/images/icon-advanced.svg"
-                    alt="advanced icon"
-                  />
+                  <img src="./dist/assets/images/icon-advanced.svg" alt="" />
                   <div>
                     <p class="select-your-plan-form__item-title">Advanced</p>
                     <p
@@ -182,9 +176,9 @@
                   </div>
                 </div>
               </div>
-              <div class="option-component" role="button" tabindex="0">
+              <div class="option-component" role="option" tabindex="0">
                 <div class="select-your-plan-form__item">
-                  <img src="./dist/assets/images/icon-pro.svg" alt="pro icon" />
+                  <img src="./dist/assets/images/icon-pro.svg" alt="" />
                   <div>
                     <p class="select-your-plan-form__item-title">Pro</p>
                     <p
@@ -209,7 +203,7 @@
                     name="monthly-yearly"
                     id="monthly-yearly"
                   />
-                  <span class="slider-round"></span>
+                  <span class="slider-round" aria-label="Yearly option"></span>
                 </label>
 
                 <p class="yearly">Yearly</p>
@@ -224,7 +218,12 @@
               </p>
             </div>
             <div class="add-ons-form__cont">
-              <label class="option-component" for="online" tabindex="0">
+              <label
+                class="option-component"
+                for="online"
+                tabindex="0"
+                role="checkbox"
+              >
                 <div class="add-ons-form__item">
                   <div class="checkbox-cont">
                     <input type="checkbox" name="online" id="online" />
@@ -239,7 +238,12 @@
                   <p class="add-ons-form__item-price">+$1/mo</p>
                 </div>
               </label>
-              <label class="option-component" for="storage" tabindex="0">
+              <label
+                class="option-component"
+                for="storage"
+                tabindex="0"
+                role="checkbox"
+              >
                 <div class="add-ons-form__item">
                   <div class="checkbox-cont">
                     <input type="checkbox" name="storage" id="storage" />
@@ -254,7 +258,12 @@
                   <p class="add-ons-form__item-price">+$2/mo</p>
                 </div>
               </label>
-              <label class="option-component" for="custom" tabindex="0">
+              <label
+                class="option-component"
+                for="custom"
+                tabindex="0"
+                role="checkbox"
+              >
                 <div class="add-ons-form__item">
                   <div class="checkbox-cont">
                     <input type="checkbox" name="custom" id="custom" />

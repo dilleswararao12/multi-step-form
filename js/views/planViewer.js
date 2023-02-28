@@ -51,9 +51,11 @@ class planViewer {
         const el = this.planOptions[i];
         if (el !== target) {
           el.classList.remove("is-selected");
+          el.setAttribute("aria-selected", false);
           continue;
         }
         el.classList.add("is-selected");
+        el.setAttribute("aria-selected", true);
         this.setCurrentPlan(i);
       }
     }
