@@ -1,7 +1,5 @@
 # Frontend Mentor - Multi-step form solution
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -11,7 +9,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -40,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Multi Form App](https://ateotg.github.io/multi-step-form-app/)
 
 ## My process
 
@@ -57,11 +54,9 @@ Users should be able to:
 
 ### What I learned
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+This is the first time I've applied some structure regarding SCSS files and I also learned about the MVC archetictural pattern with regards to JS code. I learned about some accessibility attributes such as role='listbox' which makes it so it lets user know that there is a list of items to select that are not <select> elements that contain images. In conjuction with the role ='option' attribute which tells users which elements are options. I also learned about some aria attributes like aria-label, aria-selected, etc. These help visually impaired users understand what is happening via screenreaders informing them. 
 
 ### Useful resources
 
 - [webdesignerdepot.com](https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/) - This helped me learn how to better structure my SCSS files/folders.
-- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) - This helped me learn more specific accessibility attributes to make non-semantic elements more accessible for screenreaders/visually impaired users
+- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) - This helped me learn more specific accessibility attributes to make non-semantic elements more accessible for screenreaders/visually impaired users.
