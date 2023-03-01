@@ -9,7 +9,6 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -60,4 +59,4 @@ This is the first time I've applied some structure regarding SCSS files and I al
 ### Useful resources
 
 - [webdesignerdepot.com](https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/) - This helped me learn how to better structure my SCSS files/folders.
-- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) - This helped me learn more specific accessibility attributes to make non-semantic elements more accessible for screenreaders/visually impaired users
+- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) - This helped me learn more specific accessibility attributes to make non-semantic elements more accessible for screenreaders/visually impaired users.
