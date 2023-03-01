@@ -32,6 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
+## Mobile
+![Screen Shot 2023-02-28 at 22 49 04](https://user-images.githubusercontent.com/25332391/222041372-e8c95f75-6aac-48a3-adfc-9a94bbc4c769.png)
+
+## Desktop
+![Screen Shot 2023-02-28 at 22 48 49](https://user-images.githubusercontent.com/25332391/222041397-a4c73e63-9de9-4e8f-8c16-b89bb96a569b.png)
+
 ### Links
 
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
@@ -47,6 +53,7 @@ Users should be able to:
 - Mobile-first workflow
 - Vanilla JS
 - Jest
+- MVC Architectural pattern
 
 ### What I learned
 
