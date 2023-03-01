@@ -16,25 +16,31 @@ export const state = {
 };
 
 export function incrementCurrStep() {
-  if (state.currStep === 3) return;
+  if (state.currStep >= 3) return;
   state.currStep++;
 }
 
 export function decrementCurrstep() {
-  if (state.currStep === 0) return;
+  if (state.currStep <= 0) return;
   state.currStep--;
 }
 
 export function changeCurrentStep(newStep) {
   state.currStep = newStep;
+
+  return state.currStep;
 }
 
 export function toggleIsMonthly() {
   state.isMonthly = !state.isMonthly;
+
+  return state.isMonthly;
 }
 
 export function changeCurrentPlan(key) {
   state.currPlan = state.optionPlans[key];
+
+  return state.currPlan;
 }
 
 export function changeOptionCheckedState(target, checkboxStatus) {
@@ -73,4 +79,6 @@ export function totalPriceCalc() {
     if (state.customProfileChecked)
       state.totalPrice += state.customPrices["yearly"];
   }
+
+  return state.totalPrice;
 }

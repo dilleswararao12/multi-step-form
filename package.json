@@ -1,0 +1,23 @@
+{
+  "name": "multi-step-form-app",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATEOTG/multi-step-form-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATEOTG/multi-step-form-app/issues"
+  },
+  "homepage": "https://github.com/ATEOTG/multi-step-form-app#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "jest": "^29.4.3"
+  }
+}
